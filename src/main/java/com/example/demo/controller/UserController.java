@@ -54,6 +54,11 @@ public class UserController {
         return users;
     }
 
+    @GetMapping(value = "/myJenkins")
+    public String myJenkins(){
+        return "jenkins demo";
+    }
+
     @GetMapping(value = "/getUserByName")
     public List<User> getUserByName(@RequestParam String name){
         return userService.getUserByName(name);
